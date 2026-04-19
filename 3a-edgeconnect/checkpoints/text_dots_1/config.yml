@@ -1,0 +1,38 @@
+MODE: 1
+MODEL: 1
+MASK: 3
+EDGE: 2
+NMS: 0
+SEED: 42
+GPU: [0]
+VERBOSE: 1
+
+TRAIN_FLIST: ./datasets/train_images.flist
+VAL_FLIST: ./datasets/val_images.flist
+TEST_FLIST: ./datasets/test_images.flist
+
+TRAIN_EDGE_FLIST: ./datasets/train_skeletons.flist
+VAL_EDGE_FLIST: ./datasets/val_skeletons.flist
+TEST_EDGE_FLIST: ./datasets/test_skeletons.flist
+
+TRAIN_MASK_FLIST: ./datasets/train_masks.flist
+VAL_MASK_FLIST: ./datasets/val_masks.flist
+TEST_MASK_FLIST: ./datasets/test_masks.flist
+
+LR: 0.0001
+D2G_LR: 0.01
+BETA1: 0.0
+BETA2: 0.9
+BATCH_SIZE: 8
+INPUT_SIZE: 256
+SIGMA: -1
+MAX_ITERS: 90000
+
+FM_LOSS_WEIGHT: 10
+GAN_LOSS: nsgan
+
+SAVE_INTERVAL: 1000
+SAMPLE_INTERVAL: 500
+SAMPLE_SIZE: 12
+EVAL_INTERVAL: 1000
+LOG_INTERVAL: 10
