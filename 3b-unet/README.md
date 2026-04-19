@@ -1,37 +1,42 @@
-# deep-neural-engineering-assignment2
-## Usage
-train.py uses the following files and directories to learn the network:
+# U-Net Model
 
-Dotted images go into directory: data/train_dots
+## Data Structure
+Training requires paired dotted and connected images in separate directories:
+- Dotted images: `data/train_dots/`
+- Connected images: `data/train_full/`
 
-Connected images go into: data/train_full
+Each dotted image must have a corresponding connected counterpart with the same filename.
 
-Each dotted image should have a connected counterpart in the other directory, using the same name.
+## Training
 
-Training uses default parameters that can be adjusted: 
+### Configuration
+Adjust these parameters in `train.py` as needed:
 
+```python
+LEARNING_RATE = 1e-4      # Fixed learning rate (may increase with more data, decrease with less)
+BATCH_SIZE = 8            # Batch size for training
+NUM_EPOCHS = 15           # Maximum epochs; training should converge faster; no automatic early stopping
+SAVE_DIR = "checkpoints"  # Directory for saving model checkpoints
+```
 
-LEARNING_RATE = 1e-4  #set fixed for all trainings, could be set larger when more data is used, or smaller wehn less data is used
-
-BATCH_SIZE = 8
-
-NUM_EPOCHS = 15   # as a max, should converge faster, following the loss, and avoid overtraining, no automatic early stopping foreseen
-
-SAVE_DIR = "checkpoints"
-
-Run training via:
+### Run Training
+```bash
 python train.py
+```
 
-The script will save the model after each iteration in the checkpoints directory. 
+The script saves the model after each iteration in the `checkpoints/` directory.
 
-Running test via infer_list.py
-Adjust parameters if needed:
+## Inference
 
-python infer_list.py --input ./data/test_input --ouput ./output/test_epoch3/ --model checkpoints/test_dataset3/model_epoch_3_dice.pt 
+### Run Inference
+```bash
+python infer_list.py --input ./data/test_input \
+                     --output ./output/test_epoch3/ \
+                     --model checkpoints/test_dataset3/model_epoch_3_dice.pt
+```
 
-input: dir containing the dotted images used for testing
-
-output: where the results are saved
-
-model: the model file after training to be used.
+### Parameters
+- `--input`: Directory containing dotted test images
+- `--output`: Directory where results are saved
+- `--model`: Path to the trained model file (`.pt`)
 

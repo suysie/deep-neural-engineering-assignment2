@@ -8,3 +8,6 @@ This folder contains a modified version of the EdgeConnect repository, adapted t
 - Create the flist files required for training
 
 Training artifacts are saved in the `checkpoints/` folder.
+
+For documentation on how to use edge-connect see [edge connect original docs](./README._ORIGINAL.md)
+
