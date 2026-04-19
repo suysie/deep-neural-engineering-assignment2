@@ -20,6 +20,6 @@
       }
     }
   },
-  "postCreateCommand": "pip install -r /workspace/requirements.txt",
+  "postCreateCommand": "pip install -r /workspace/.devcontainer/use-edge-connect/requirements.txt",
   "remoteUser": "root"
 }

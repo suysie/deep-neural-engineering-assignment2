@@ -1,0 +1,13 @@
+from pathlib import Path
+
+BASE_DIR = Path("./data_for_training")
+for split in ["train", "val", "test"]:
+    img_dir = BASE_DIR / split / "images"
+    
+    flist_img  = BASE_DIR / f"{split}_images.flist"
+    flist_skel = BASE_DIR / f"{split}_skeletons.flist"
+    flist_mask = BASE_DIR / f"{split}_masks.flist"
+    
+    for flist, subdir in [(flist_img, "images"), (flist_skel, "skeletons"), (flist_mask, "masks")]:
+        flist.write_text("\n".join(str(p) for p in sorted(img_dir.glob("*.png"))))
+        print(f"{flist}: {len(list(img_dir.glob('*.png')))} files")
