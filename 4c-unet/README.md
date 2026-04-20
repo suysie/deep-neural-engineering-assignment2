@@ -38,5 +38,5 @@ python infer_list.py --input ./data/test_input \
 ### Parameters
 - `--input`: Directory containing dotted test images
 - `--output`: Directory where results are saved
-- `--model`: Path to the trained model file (`.pt`)
+- `--model`: Path to the trained model file (`.pth`)
 
