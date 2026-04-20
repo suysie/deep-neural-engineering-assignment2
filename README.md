@@ -6,11 +6,11 @@ Directories '1..' - '6..' represent the steps of the pipeline.
 Directory 'data' contains all images (input, target, and generated).
 
 ## More specific docs
-- [2a-edgeconnect-train](2a-edgeconnect-train/README.md) - EdgeConnect training setup
-- [3a-edgeconnect](3a-edgeconnect/README.md) - EdgeConnect preprocessing (inference)
-- [3b-unet](3b-unet/README.md) - U-Net model
-- [4-ocr](4-ocr/ocr.ipynb) - OCR step
-- [5-postprocessing](5-postprocessing/data_processing.ipynb) - Post-processing
+- [2a-edgeconnect-train](4b-edgeconnect-train/README.md) - EdgeConnect training setup
+- [3a-edgeconnect](4b-edgeconnect/README.md) - EdgeConnect preprocessing (inference)
+- [3b-unet](4c-unet/README.md) - U-Net model
+- [4-ocr](5-ocr/ocr.ipynb) - OCR step
+- [5-postprocessing](6-postprocessing/data_processing.ipynb) - Post-processing
 - [data](data/README.md) - Dataset information
 
 ## Environment
