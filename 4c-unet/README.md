@@ -32,7 +32,7 @@ The script saves the model after each iteration in the `checkpoints/` directory.
 ```bash
 python infer_list.py --input ./data/test_input \
                      --output ./output/test_epoch3/ \
-                     --model checkpoints/test_dataset3/model_epoch_3_dice.pt
+                     --model checkpoints/test_dataset3/model_epoch_3_dice.pth
 ```
 
 ### Parameters
